@@ -1,0 +1,462 @@
+:root {
+  --background-white: #ffffff;
+  --light-grey: #f7f7f7;
+  --text-dark-grey: #333333;
+  --primary-blue: #a6d2f5;
+  --accent-green: #23366f;
+  --accent-yellow: #fa5b35;
+  --secondary-turquoise: #40e0d0;
+  --vivid-pink: #ff1493;
+  --deep-purple: #6a0dad;
+
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--light-grey);
+  font-family: Garamond, 'Times New Roman', Times, serif;
+  color: var(--text-dark-grey);
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+  overflow-x: hidden;
+}
+
+.container-versicherungen { 
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+  border-radius: 15px;
+}
+
+.title-image-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 300px;
+  padding-top: 100px;
+  padding-bottom: 80px;
+  gap: 300px;
+}
+
+.title-image {
+  width: 100px;
+  height: auto;
+}
+
+h1 {
+  font-size: 48px;
+  color: var(--accent-yellow);
+  text-align: center;
+}
+
+h2 {
+  font-size: 30px;
+  color: var(--highlight-orange);
+  margin-top: 100px;
+  margin-bottom: 40px;
+}
+
+::selection {
+  background-color: var(--text-dark-grey);
+  color: var(--light-grey);}
+
+.container {
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+  height: 100vh;
+}
+
+.left-section {
+  flex: 1;
+  background-color: #f0f0f0; /* Hintergrundfarbe links */
+  padding: 0 80px 40px 80px;
+  box-sizing: border-box;
+}
+.right-section {
+  flex: 1;
+  background-color: #ffffff; /* Hintergrundfarbe rechts */
+  padding: 0 80px 40px 80px;
+  box-sizing: border-box;
+}
+
+p {
+  font-size: 24px;
+  line-height: 1.5;
+  color: var(--text-dark-grey);
+  text-align: justify;
+}
+
+p::selection {
+  background-color: var(--text-dark-grey);
+  color: var(--light-grey);
+}
+
+.cards-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card-plus, .card {
+  background: var(--primary-blue);
+  color: var(--background-white);
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 280px;
+}
+
+.card-plus:hover, .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.menu-link {
+  text-decoration: none;
+  font-size: 20px;
+  color: var(--background-white);
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.menu-link:hover {
+  color: var(--vivid-pink);
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px; /* Headerhöhe */
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transform: translateY(0); /* Standardposition */
+  transition: transform 0.3s ease-in-out;
+}
+
+section {
+  margin-bottom: 200px;
+}
+
+
+header.visible {
+  transform: translateY(0);
+}
+
+header .logo {
+  height: 70px; /* Logo vergrößern */
+  cursor: pointer;
+}
+
+.header-menu {
+  display: flex;
+  padding-right: 50px;
+  gap: 30px;
+}
+
+.header-menu .menu-item {
+  position: relative; /* Für Dropdown */
+  padding-right: 30px;
+}
+
+.header-menu .menu-link {
+  text-decoration: none;
+  color: var(--text-dark-grey);
+  font-size: 18px;
+  font-weight: bold;
+  transition: color 0.3s;
+  margin-right: 100px;
+}
+
+.header-menu .menu-link:hover {
+  color: var(--vivid-pink);
+  cursor: pointer;
+}
+
+/* Dropdown-Menü */
+.menu-item .dropdown {
+  position: absolute;
+  top: 100%; /* Direkt unter dem Link */
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: none; /* Standardmäßig versteckt */
+  flex-direction: column;
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.menu-item:hover .dropdown {
+  display: flex; /* Zeigen, wenn darüber gefahren wird */
+}
+
+.menu-item .dropdown a {
+  padding: 10px 20px;
+  text-decoration: none;
+  color: var(--text-dark-grey);
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.menu-item .dropdown a:hover {
+  background-color: var(--light-grey);
+}
+/* Standardstil für Dropdown-Links */
+.dropdown-link {
+  padding: 10px 20px;
+  text-decoration: none;
+  color: var(--text-dark-grey);
+  font-size: 16px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Stil für die aktive Seite */
+/* Sicherstellen, dass aktive Links gut sichtbar sind */
+.dropdown-link.active {
+  background-color: var(--primary-blue); /* Highlight-Farbe */
+  color: var(--background-white);
+  font-weight: bold;
+  border-left: 4px solid var(--highlight-orange); /* Optional: optischer Hinweis */
+}
+
+
+
+
+
+
+
+
+
+
+
+.quiz body {
+  background: #ffffff;
+  color: #333333;
+  font-family: Garamond, "Times New Roman", Times, serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.app {
+  background-color: white;
+  width: 90%;
+  max-width: 50rem;
+  margin: 1rem auto;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.app h3 {
+  font-size: 25px;
+  color: black;
+  font-weight: 600;
+  border-bottom: 1px solid black;
+  padding-bottom: 20px;
+  margin: 50px;
+  padding-top: 50px;
+}
+
+.quiz {
+  padding: 0 50px 50px 50px;
+}
+
+.quiz h4 {
+  font-size: 20px;
+  font-weight: 600;
+  color: black;
+}
+
+#question {
+  font-size: 24px;
+  min-height: 6rem; /* Mindesthöhe für die Frage */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;}
+
+#timer, #question-counter {
+  text-align: center;
+  font-size: 18px;
+  margin: 10px;
+}
+
+#answer-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+  min-height: 200px;
+}
+
+.navigation-buttons {
+  display: flex;
+  justify-content: space-between; /* Buttons mit Abstand verteilen */
+  gap: 10px;
+  margin-top: 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+#prev-btn, #next-btn {
+  flex: 1; /* Optional: Buttons gleich groß machen */
+  max-width: 80px; /* Optional: Maximalgröße der Buttons */
+  font-size: 16px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+#back-to-overview-btn {
+  margin-left: auto; /* Rechts ausgerichtet */
+  max-width: 80px;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.btn {
+  padding: 0;
+  font-size: 16px;
+  border: 1px solid #333;
+  border-radius: 4px;
+  background-color: white;
+  color: black;
+  text-align: center;
+  cursor: pointer;
+  flex: 1; /* Gleiche Breite für alle Buttons */
+}
+
+.btn2 {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #333;
+  border-radius: 4px;
+  background-color: white;
+  color: black;
+  text-align: center;
+  cursor: pointer;
+  flex: 1; /* Gleiche Breite für alle Buttons */
+}
+
+#end-test-btn {
+  margin-bottom: 20px;
+}
+
+.btn:hover {
+  background-color: #f0f0f0;
+}
+
+.btn.correct {
+  background-color: green;
+  color: white;
+}
+
+.btn.wrong {
+  background-color: red;
+  color: white;
+}
+
+.btn.selected {
+  background-color: blue;
+  color: white;
+}
+
+#overview {
+  display: none;
+  text-align: center;
+  margin-top: 20px;
+}
+
+#overview .summary-grid {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  justify-content: center;
+  grid-area: 10px;
+  margin-top: 20px;
+  justify-items: center;
+}
+
+#overview .summary-item {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.summary-item.answered {
+  background-color: blue;
+}
+
+.summary-item.unanswered {
+  background-color: var(--light-grey);
+  border: 2px solid #333;
+  color: #333;
+}
+
+#results {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#results .summary-grid {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#results .summary-grid .summary-item.correct {
+  background-color: green;
+}
+
+#results .summary-grid .summary-item.wrong {
+  background-color: red;
+}
+
+#results .summary-grid .summary-item {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.btn.disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+}
