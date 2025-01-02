@@ -79,13 +79,18 @@ h1 {
   .header-title {
     font-size: 1.1rem;
   }
+  header .logo {
+    height: 6vh; /* Logo verkleinern */
+  }
 }
 
 /* Anpassung für sehr kleine Bildschirmgrößen */
 @media (max-width: 480px) {
   .header-title {
-    font-size: 0.6rem;
-    margin: none;
+    font-size: 0.5rem;
+  }
+  header .logo {
+    height: 4vh; /* Logo noch kleiner */
   }
 }
 
