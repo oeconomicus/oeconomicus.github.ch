@@ -8,18 +8,17 @@
   --secondary-turquoise: #40e0d0;
   --vivid-pink: #ff1493;
   --deep-purple: #6a0dad;
+  --gold: #FFC107;
 
 }
 
 html, body {
-  width: 100%;
-  height: 100%;
   margin: 0;
   padding: 0;
 }
 
 body {
-  background: var(--light-grey);
+  background: var(--background-white);
   font-family: Garamond, 'Times New Roman', Times, serif;
   color: var(--text-dark-grey);
   margin: 0;
@@ -53,15 +52,40 @@ body {
 
 h1 {
   font-size: 48px;
-  color: var(--accent-yellow);
+  color: var(--gold);
   text-align: center;
 }
 
-h2 {
-  font-size: 30px;
-  color: var(--highlight-orange);
-  margin-top: 100px;
-  margin-bottom: 40px;
+
+
+.header-title {
+  font-size: 2rem; /* Standardgröße für große Bildschirme */
+  text-align: center;
+  color: var(--text-dark-grey);
+  font-weight: bold;
+  margin: 0;
+  padding: 10px 0;
+}
+
+/* Anpassung für mittlere Bildschirmgrößen */
+@media (max-width: 1200px) {
+  .header-title {
+    font-size: 1.5rem;
+  }
+}
+
+/* Anpassung für kleine Bildschirmgrößen */
+@media (max-width: 768px) {
+  .header-title {
+    font-size: 1.1rem;
+  }
+}
+
+/* Anpassung für sehr kleine Bildschirmgrößen */
+@media (max-width: 480px) {
+  .header-title {
+    font-size: 1rem;
+  }
 }
 
 ::selection {
@@ -69,31 +93,72 @@ h2 {
   color: var(--light-grey);}
 
 .container {
-  display: flex;
-  width: 100%;
-  max-width: 100%;
-  height: 100vh;
+  padding: 0 20vw;
 }
 
-.left-section {
-  flex: 1;
-  background-color: #f0f0f0; /* Hintergrundfarbe links */
-  padding: 0 80px 40px 80px;
-  box-sizing: border-box;
+.section-3-säulen-1 {
+  padding-top: 15vh;
 }
-.right-section {
-  flex: 1;
-  background-color: #ffffff; /* Hintergrundfarbe rechts */
-  padding: 0 80px 40px 80px;
-  box-sizing: border-box;
+
+.section1 {
+  padding: 15vh 20vw 5vh 20vw;
+  background-color: var(--background-white);
 }
+
+.topics-section {
+  background: var(--light-grey);
+  padding: 5vh 10vw 5vh 10vw;
+}
+
+.topics-section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.cards-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: var(--secondary-turquoise);
+  color: var(--background-white);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.inhalt-btn {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #631313;
+  border-radius: 4px;
+  background-color: white;
+  color: rgb(15, 196, 60);
+  text-align: center;
+  cursor: pointer;
+  flex: 1; /* Gleiche Breite für alle Buttons */
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
 
 p {
   font-size: 24px;
   line-height: 1.5;
   color: var(--text-dark-grey);
   text-align: justify;
+  hyphens: auto; /* Aktiviert die automatische Silbentrennung */
+  overflow-wrap: break-word; /* Zeilenumbrüche bei langen Wörtern */
+  word-break: break-word; /* Zusätzliche Absicherung für ältere Browser */
 }
+
 
 p::selection {
   background-color: var(--text-dark-grey);
@@ -125,6 +190,7 @@ p::selection {
 
 .menu-link {
   text-decoration: none;
+  display: flex;
   font-size: 20px;
   color: var(--background-white);
   font-weight: bold;
@@ -132,30 +198,54 @@ p::selection {
 }
 
 .menu-link:hover {
-  color: var(--vivid-pink);
+  color: var(--gold);
 }
+
 
 header {
   position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100px; /* Headerhöhe */
+  height: 15vh; /* Headerhöhe */
   background-color: #fff;
   border-bottom: 1px solid #ccc;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 40px;
+  padding: 0 5vb;
   z-index: 1000;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transform: translateY(0); /* Standardposition */
   transition: transform 0.3s ease-in-out;
 }
 
-section {
-  margin-bottom: 200px;
+.subheader {
+  position: absolute;
+  top: 15vh; /* Höhe des Headers */
+  left: 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 5vh;
+  width: 100%;
+  background-color: #f0f0f0;
+  border-bottom: 1px solid #ccc;
+  z-index: 1000;
+  gap: 30px;
 }
+
+.subheader a {
+  text-decoration: none;
+  font-size: 16px; /* Schriftgröße */
+  font-weight: bold; /* Fett für Hervorhebung */
+  color: var(--text-dark-grey); /* Einheitliche Farbe */
+  padding: 10px 20px; /* Abstand */
+  transition: color 0.3s ease;
+}
+
+.subheader a:hover {
+  color: var(--gold); /* Hover-Farbe */
+}
+
 
 
 header.visible {
@@ -163,32 +253,30 @@ header.visible {
 }
 
 header .logo {
-  height: 70px; /* Logo vergrößern */
+  height: 8vh; /* Logo vergrößern */
   cursor: pointer;
 }
 
 .header-menu {
   display: flex;
-  padding-right: 50px;
-  gap: 30px;
+  gap: 1.5vw;
 }
 
 .header-menu .menu-item {
   position: relative; /* Für Dropdown */
-  padding-right: 30px;
+  display: flex;
 }
 
 .header-menu .menu-link {
   text-decoration: none;
   color: var(--text-dark-grey);
-  font-size: 18px;
+  font-size: 22px;
   font-weight: bold;
   transition: color 0.3s;
-  margin-right: 100px;
 }
 
 .header-menu .menu-link:hover {
-  color: var(--vivid-pink);
+  color: var(--gold);
   cursor: pointer;
 }
 
@@ -203,7 +291,7 @@ header .logo {
   flex-direction: column;
   border-radius: 5px;
   overflow: hidden;
-  z-index: 10;
+  z-index: 2000;
 }
 
 .menu-item:hover .dropdown {
@@ -239,6 +327,41 @@ header .logo {
   border-left: 4px solid var(--highlight-orange); /* Optional: optischer Hinweis */
 }
 
+.hamburger-menu {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding-right: 5vw;
+}
+
+.dropdown-menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.dropdown-menu.active {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .header-menu {
+    display: none; /* Desktop-Navigation ausblenden */
+  }
+
+  .hamburger-menu {
+    display: block; /* Hamburger-Menü anzeigen */
+  }
+
+  .dropdown-menu {
+    width: 100%;
+  }
+}
 
 
 
@@ -250,20 +373,19 @@ header .logo {
 
 
 .quiz body {
-  background: #ffffff;
+  background: var(--background-white);
   color: #333333;
   font-family: Garamond, "Times New Roman", Times, serif;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
   height: 100vh;
-  margin: 0;
 }
 
 .app {
-  background-color: white;
+  background-color: var(--background-white);
   width: 90%;
-  max-width: 50rem;
+  max-width: 700px;
   margin: 1rem auto;
   text-align: center;
   border-radius: 10px;
@@ -271,17 +393,27 @@ header .logo {
 }
 
 .app h3 {
-  font-size: 25px;
+  font-size: 1.8rem;
   color: black;
-  font-weight: 600;
+  font-weight: bold;
   border-bottom: 1px solid black;
   padding-bottom: 20px;
-  margin: 50px;
-  padding-top: 50px;
+  margin: 1rem 6vb;
+  padding: 2rem;
+}
+.app p {
+  font-size: 1.2rem;
+  color: black;
+  margin: 2rem 6vb 2vh 6vb;
+  hyphens: auto; /* Aktiviert die automatische Silbentrennung */
+  overflow-wrap: break-word; /* Zeilenumbrüche bei langen Wörtern */
+  word-break: break-word; /* Zusätzliche Absicherung für ältere Browser */
 }
 
+
+
 .quiz {
-  padding: 0 50px 50px 50px;
+  padding: 0 6vb 6vb 6vb;
 }
 
 .quiz h4 {
@@ -320,7 +452,37 @@ header .logo {
   position: relative;
   cursor: pointer;
 }
+@media (max-width: 768px) {
+  .app {
+    width: 95%;
+  }
 
+  #question {
+    font-size: 18px;
+  }
+
+  #answer-buttons button {
+    font-size: 14px;
+  }
+
+  .navigation-buttons button {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #question {
+    font-size: 0.9rem;
+  }
+
+  .navigation-buttons {
+    flex-direction: column;
+  }
+
+  .navigation-buttons button {
+    margin-bottom: 10px;
+  }
+}
 #prev-btn, #next-btn {
   flex: 1; /* Optional: Buttons gleich groß machen */
   max-width: 80px; /* Optional: Maximalgröße der Buttons */
@@ -331,7 +493,7 @@ header .logo {
 
 #back-to-overview-btn {
   margin-left: auto; /* Rechts ausgerichtet */
-  max-width: 80px;
+  max-width: 100px;
   font-size: 16px;
   cursor: pointer;
   padding: 10px;
@@ -359,6 +521,64 @@ header .logo {
   text-align: center;
   cursor: pointer;
   flex: 1; /* Gleiche Breite für alle Buttons */
+  margin-bottom: 2vh;
+}
+
+.btn3 {
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 4px;
+  color: var(--background-white);
+  text-align: center;
+  cursor: pointer;
+  flex: 1; /* Gleiche Breite für alle Buttons */
+  margin-bottom: 2vh;
+  text-decoration: none;
+  display: inline-block;
+  background-color: #8B0000;
+}
+
+.btn3:hover:hover {
+  background-color: var(--gold); /* Helle Goldfarbe */
+}
+
+.btn4 {
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 4px;
+  color: var(--background-white);
+  text-align: center;
+  cursor: pointer;
+  flex: 1; /* Gleiche Breite für alle Buttons */
+  margin-bottom: 2vh;
+  text-decoration: none;
+  display: inline-block;
+  background-color: #003366;
+}
+
+.btn4:hover:hover {
+  background-color: var(--gold); /* Helle Goldfarbe */
+}
+
+.btn5 {
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 4px;
+  color: var(--text-dark-grey);
+  text-align: center;
+  cursor: pointer;
+  flex: 1; /* Gleiche Breite für alle Buttons */
+  margin-bottom: 2vh;
+  text-decoration: none;
+  display: inline-block;
+  background-color: #FFD333;
+}
+
+.btn5:hover {
+  background-color: var(--gold); /* Helle Goldfarbe */
 }
 
 #end-test-btn {
@@ -387,16 +607,16 @@ header .logo {
 #overview {
   display: none;
   text-align: center;
-  margin-top: 20px;
 }
 
 #overview .summary-grid {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   justify-content: center;
-  grid-area: 10px;
-  margin-top: 20px;
+  margin-top: 2vh;
   justify-items: center;
+  margin-bottom: 2vh;
+  padding: 0 2vw;
 }
 
 #overview .summary-item {
@@ -409,7 +629,7 @@ header .logo {
   color: rgb(0, 0, 0);
   cursor: pointer;
   border-radius: 8px;
-  margin-bottom: 20px;
+  margin-bottom: 1vh;
 }
 
 .summary-item.answered {
@@ -431,8 +651,10 @@ header .logo {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   justify-content: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 2vh;
+  justify-items: center;
+  padding: 0 2vw;
+  margin-bottom: 2vh;
 }
 
 #results .summary-grid .summary-item.correct {
@@ -443,7 +665,7 @@ header .logo {
   background-color: red;
 }
 
-#results .summary-grid .summary-item {
+#results .summary-item {
   width: 40px;
   height: 40px;
   display: flex;
@@ -453,10 +675,129 @@ header .logo {
   color: white;
   cursor: pointer;
   border-radius: 8px;
+  margin-bottom: 1vh;
+}
+
+@media (max-width: 768px) {
+  #overview .summary-item, #results .summary-item {
+      font-size: 14px; /* Kleinere Schriftgröße */
+      width: 22px; /* Kleinere Boxen */
+      height: 22px;
+  }
+}
+
+/* Anpassungen für sehr kleine Bildschirme */
+@media (max-width: 480px) {
+  #overview .summary-item, #results .summary-item {
+      font-size: 8px; /* Noch kleinere Schriftgröße */
+      width: 10px; /* Noch kleinere Boxen */
+      height: 10px;
+  }
 }
 
 .btn.disabled {
   background-color: #ccc;
   color: #666;
   cursor: not-allowed;
+}
+
+
+.cards-container .card:nth-child(1) {
+  background-color: #8B0000 /* 3-Säulen-System */
+}
+
+.cards-container .card:nth-child(2) {
+  background-color: #003366; /* Versicherungen */
+}
+
+.cards-container .card:nth-child(3) {
+  background-color: #FFD333; /* Finanzinstrumente */
+}
+
+.cards-container .card h3,
+.cards-container .card p {
+  font-size: 20px; /* Schrift vergrößern */
+}
+
+.cards-container .card .inhalt-btn {
+  font-size: 18px;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+/* Knöpfe passend zu den Boxen */
+.cards-container .card:nth-child(1) .inhalt-btn {
+  background-color: #FF6347;
+  color: white;
+}
+
+.cards-container .card:nth-child(2) .inhalt-btn {
+  background-color: #1E90FF;
+  color: white;
+}
+
+.cards-container .card:nth-child(3) .inhalt-btn {
+  background-color: #FF8C00;
+  color: white;
+}
+
+
+/* Entfernen der Umrandung (Border) der Buttons */
+.cards-container .card .inhalt-btn {
+  border: none; /* Keine Umrandung */
+  padding: 15px;
+  font-size: 18px;
+  border-radius: 8px;
+  margin-top: 10px;
+  text-decoration: none; /* Keine Unterstreichung */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover-Effekt: Dunklerer Farbton */
+.cards-container .card .inhalt-btn:hover {
+  background-color: var(--gold); /* Helle Goldfarbe */
+  transform: scale(1.05); /* Leichte Vergrößerung bei Hover */
+}
+
+/* Schriftfarbe des Beschreibungstextes in den Boxen */
+.cards-container .card p {
+  color: #ffffff; /* Weiße Schrift */
+}
+
+/* Vergrößern der Untertitel (3-Säulen-System, Versicherungen, Finanzinstrumente) */
+.cards-container .card h3 {
+  font-size: 24px; /* Größere Schriftgröße */
+  font-weight: bold; /* Bessere Sichtbarkeit */
+}
+
+
+/* Verringern des Abstands zwischen Inhalts- und Testboxen */
+.topics-section {
+  margin-bottom: 20px; /* Weniger Abstand zwischen Sektionen */
+  padding: 5vh 8vw; /* Etwas kompakterer Innenabstand */
+}
+
+/* Anpassung der Breite der Boxen und bessere Ausrichtung */
+.cards-container .card {
+  width: 320px; /* Breitere Boxen */
+  max-width: 90%; /* Boxen passen sich kleineren Bildschirmen an */
+  padding: 25px; /* Mehr Platz für Text */
+  margin: 0 auto; /* Zentrierte Boxen */
+}
+
+/* Verbesserte Abstände zwischen Boxen und Seiten */
+.cards-container {
+  gap: 15px; /* Kleinerer Abstand zwischen Boxen */
+  justify-content: space-around; /* Gleichmäßige Verteilung */
+}
+
+/* Textausrichtung und Schriftgröße */
+.cards-container .card h3 {
+  font-size: 26px; /* Größere Schrift für Untertitel */
+  font-weight: bold; /* Klare Hervorhebung */
+}
+
+.cards-container .card p {
+  font-size: 18px; /* Lesbare Schriftgröße */
 }
