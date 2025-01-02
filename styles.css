@@ -84,7 +84,8 @@ h1 {
 /* Anpassung für sehr kleine Bildschirmgrößen */
 @media (max-width: 480px) {
   .header-title {
-    font-size: 1rem;
+    font-size: 0.6rem;
+    margin: none;
   }
 }
 
