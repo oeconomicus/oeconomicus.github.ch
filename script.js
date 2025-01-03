@@ -622,7 +622,6 @@ function endTest() {
         .join("")}
     </div>
     <button id="return-to-start-btn" class="btn2">Ergebnisse Speichern</button>
-    <button id="direct-return-btn" class="btn2">Test beenden</button>
   `;
   resultsElement.style.display = "block";
 
