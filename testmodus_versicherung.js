@@ -106,7 +106,7 @@ const questions = [
     correct: "CHF 2'500",
     },
     {
-    question: "Was ist die maximale Selbstbehaltssumme pro Jahr in der Grundversicherung?",
+    question: "Was ist der maximale Selbstbehalt pro Jahr in der Grundversicherung?",
     answers: [
     "CHF 500",
     "CHF 700",
@@ -119,7 +119,7 @@ const questions = [
     question: "Wie kann man die Höhe der Prämie in der Grundversicherung reduzieren?",
     answers: [
     "Durch den Wechsel zur HMO- oder Telmed-Modell",
-    "Durch Erhöhung der Selbstbehaltssumme",
+    "Durch Erhöhung des Selbstbehalt",
     "Durch Kündigung der Zusatzversicherung",
     "Durch Wahl eines höheren Deckungsbetrags",
     ],
@@ -130,8 +130,8 @@ const questions = [
     answers: [
     "Aufgrund bestehender Gesundheitsrisiken",
     "Wegen eines zu niedrigen Einkommens",
-    "Weil die Grundversicherung verpflichtend ist",
-    "Wegen mangelnder Zahlungsbereitschaft",
+    "Weil die Person bereits im hohen Alter ist",
+    "Weil bereits eine Grundversicherung besteht",
     ],
     correct: "Aufgrund bestehender Gesundheitsrisiken",
     },
@@ -180,12 +180,12 @@ const questions = [
     {
     question: "Welches Schadensszenario wird typischerweise durch eine Privathaftpflichtversicherung gedeckt?",
     answers: [
-    "Absichtliches Zerbrechen einer Vase",
-    "Zerbrechen einer Vase bei Freunden",
-    "Schäden an deinem eigenen Eigentum",
+    "Absichtliches Zerbrechen einer Türe",
+    "Zerbrechen einer teuren Vase bei Freunden",
+    "Schäden an deinem eigenen Laptop",
     "Kosten für einen Autounfall",
     ],
-    correct: "Zerbrechen einer Vase bei Freunden",
+    correct: "Zerbrechen einer teuren Vase bei Freunden",
     },
     {
     question: "Was beeinflusst die Prämienhöhe einer Privathaftpflichtversicherung?",
@@ -240,7 +240,7 @@ const questions = [
             correct: "Kapitallebensversicherung",
             },
             {
-            question: "Welche Leistung erbringt eine Risikolebensversicherung?",
+            question: "Welche der Leistungen erbringt eine Risikolebensversicherung?",
             answers: [
             "Auszahlung des Sparanteils bei Vertragsende",
             "Zahlung eines festen Betrags im Todesfall",
@@ -274,21 +274,21 @@ const questions = [
         question: "Was deckt die Haftpflichtversicherung für Motorfahrzeuge?",
         answers: [
         "Schäden am eigenen Fahrzeug",
-        "Schäden an Dritten (Personen oder Sachen)",
+        "Schäden an Dritten oder deren Sachen",
         "Reparaturen am Motor",
         "Schäden durch Diebstahl",
         ],
-        correct: "Schäden an Dritten (Personen oder Sachen)",
+        correct: "Schäden an Dritten oder deren Sachen",
         },
         {
         question: "Für welche Schäden kommt die Teilkaskoversicherung auf?",
         answers: [
         "Schäden an anderen Fahrzeugen",
-        "Schäden durch Diebstahl, Glasbruch oder Naturereignisse",
+        "Schäden durch Diebstahl oder Naturereignisse",
         "Schäden durch absichtliche Zerstörung",
         "Alle Reparaturkosten",
         ],
-        correct: "Schäden durch Diebstahl, Glasbruch oder Naturereignisse",
+        correct: "Schäden durch Diebstahl oder Naturereignisse",
         },
         {
         question: "Wann lohnt sich eine Vollkaskoversicherung besonders?",
@@ -344,12 +344,12 @@ const questions = [
             {
             question: "Wie hoch ist der Prozentsatz des versicherten Lohns, den die Arbeitslosenversicherung in der Regel zahlt?",
             answers: [
-            "50 % oder 70 %",
-            "60 % oder 70 %",
-            "70 % oder 80 %",
-            "90 % oder 100 %",
+            "50 % bzw. 70 %",
+            "60 % bzw. 70 %",
+            "90 % bzw. 100 %",
+            "70 % bzw. 80 %",
             ],
-            correct: "70 % oder 80 %",
+            correct: "70 % bzw. 80 %",
             },
             ];
 
