@@ -398,6 +398,13 @@ header .logo {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+@media screen and (max-width: 768px) {
+  .app {
+    width: 100%;
+  }
+  
+}
+
 .app h3 {
   font-size: 1.8rem;
   color: black;
@@ -420,6 +427,15 @@ header .logo {
 
 .quiz {
   padding: 0 6vb 6vb 6vb;
+}
+
+
+@media screen and (max-width: 768px) {
+  .quiz {
+    width: 100%;
+    padding: 0 2vw 2vh 2vw;
+  }
+  
 }
 
 .quiz h4 {
