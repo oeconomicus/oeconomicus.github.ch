@@ -416,7 +416,12 @@ header .logo {
   word-break: break-word; /* Zusätzliche Absicherung für ältere Browser */
 }
 
-
+@media screen and (max-width: 768px) {
+  .app {
+    width: 100%;
+  }
+  
+}
 
 .quiz {
   padding: 0 6vb 6vb 6vb;
