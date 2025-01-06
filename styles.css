@@ -2,12 +2,8 @@
   --background-white: #ffffff;
   --light-grey: #f7f7f7;
   --text-dark-grey: #333333;
-  --primary-blue: #a6d2f5;
-  --accent-green: #23366f;
-  --accent-yellow: #fa5b35;
-  --secondary-turquoise: #40e0d0;
-  --vivid-pink: #ff1493;
-  --deep-purple: #6a0dad;
+  --blue: #003366;
+  --red: #8B0000;
   --gold: #FFC107;
 
 }
@@ -57,6 +53,17 @@ h1 {
 }
 
 
+h6 {
+  font-size: 38px;
+  margin: 0;
+}
+
+
+h2 {
+  font-size: 30px;
+}
+
+
 
 .header-title {
   font-size: 2rem; /* Standardgröße für große Bildschirme */
@@ -79,18 +86,12 @@ h1 {
   .header-title {
     font-size: 1.1rem;
   }
-  header .logo {
-    height: 6vh; /* Logo verkleinern */
-  }
 }
 
 /* Anpassung für sehr kleine Bildschirmgrößen */
 @media (max-width: 480px) {
   .header-title {
-    font-size: 0.5rem;
-  }
-  header .logo {
-    height: 4vh; /* Logo noch kleiner */
+    font-size: 1rem;
   }
 }
 
@@ -102,18 +103,47 @@ h1 {
   padding: 0 20vw;
 }
 
-.section-3-säulen-1 {
-  padding-top: 15vh;
+
+.section-text_a0 {
+  padding: 18vh 20vw 4vh 20vw;
+  background-color: var(--background-white);
 }
 
-.section1 {
-  padding: 15vh 20vw 5vh 20vw;
+
+.section-text_a {
+  padding: 25vh 20vw 4vh 20vw;
   background-color: var(--background-white);
+}
+
+.section-text_b {
+  padding: 6vh 20vw 4vh 20vw;
+  background-color: var(--light-grey);
+}
+
+.section-text_c {
+  padding: 4vh 20vw 4vh 20vw;
+  background-color: var(--background-white);
+}
+
+.section-text_d {
+  padding: 4vh 20vw 4vh 20vw;
+  background-color: rgba(139, 0, 0, 0.9); /* Alternativ: etwas helleres Rot */
+  border-radius: 8px;
+  color: white; /* Sicherstellen, dass der Text gut lesbar ist */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Leichter Schatten für Eleganz */
+}
+
+.section-text_e {
+  padding: 4vh 20vw 4vh 20vw;
+  background-color: rgba(0, 51, 102, 0.9);  /* Alternativ: etwas helleres Rot */
+  border-radius: 8px;
+  color: white; /* Sicherstellen, dass der Text gut lesbar ist */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Leichter Schatten für Eleganz */
 }
 
 .topics-section {
   background: var(--light-grey);
-  padding: 5vh 10vw 5vh 10vw;
+  padding: 5vh 20vw 6vh 20vw;
 }
 
 .topics-section h2 {
@@ -123,30 +153,50 @@ h1 {
 
 .cards-container {
   display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
+  gap: 200px;
 }
 
 .card {
   background: var(--secondary-turquoise);
   color: var(--background-white);
-  padding: 20px;
   border-radius: 10px;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+.cards-container {
+  gap: 10px; /* Gap halbiert */
+  justify-content: space-between; /* Boxen gleichmäßig verteilen */
+  flex-wrap: wrap;
+}
+
+
+
+.cards-container .card {
+  flex: 1 1 calc((100% - 40px) / 3); /* Dynamische Breite: 3 Boxen pro Zeile, inkl. Gap */
+  max-width: calc((100% - 40px) / 3); /* Maximale Breite */
+  display: flex;
+  flex-direction: column; /* Vertikale Anordnung */
+  justify-content: flex-start;
+  align-items: center; /* Zentrierung der Inhalte */
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background: var(--secondary-turquoise);
+  color: var(--background-white);
+}
+
 .inhalt-btn {
-  padding: 10px;
+  margin-top: auto;
+  padding: 10px 15px;
   font-size: 16px;
   border: 1px solid #631313;
   border-radius: 4px;
   background-color: white;
-  color: rgb(15, 196, 60);
   text-align: center;
   cursor: pointer;
-  flex: 1; /* Gleiche Breite für alle Buttons */
+  flex: 1;
 }
 
 .card:hover {
@@ -217,7 +267,6 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 5vb;
   z-index: 1000;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transform: translateY(0); /* Standardposition */
@@ -249,10 +298,33 @@ header {
 }
 
 .subheader a:hover {
-  color: var(--gold); /* Hover-Farbe */
+  color: var(--gold)!important /* Hover-Farbe */
 }
 
+.subheader2 {
+  position: absolute;
+  top: 15vh; /* Höhe des Headers */
+  left: 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 5vh;
+  width: 100%;
+  background-color: #f0f0f0;
+  border-bottom: 1px solid #ccc;
+  z-index: 1000;
+}
 
+.subheader2 a {
+  text-decoration: none;
+  font-size: 16px; /* Schriftgröße */
+  font-weight: bold; /* Fett für Hervorhebung */
+  color: var(--text-dark-grey); /* Einheitliche Farbe */
+}
+
+.subheader2 a:hover {
+  color: var(--gold)!important /* Hover-Farbe */
+}
 
 header.visible {
   transform: translateY(0);
@@ -261,11 +333,13 @@ header.visible {
 header .logo {
   height: 8vh; /* Logo vergrößern */
   cursor: pointer;
+  margin-left: 6vw;
 }
 
 .header-menu {
   display: flex;
   gap: 1.5vw;
+  margin-right: 6vw;
 }
 
 .header-menu .menu-item {
@@ -292,6 +366,7 @@ header .logo {
   top: 100%; /* Direkt unter dem Link */
   left: 0;
   background-color: #fff;
+
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: none; /* Standardmäßig versteckt */
   flex-direction: column;
@@ -327,11 +402,17 @@ header .logo {
 /* Stil für die aktive Seite */
 /* Sicherstellen, dass aktive Links gut sichtbar sind */
 .dropdown-link.active {
-  background-color: var(--primary-blue); /* Highlight-Farbe */
-  color: var(--background-white);
+  background-color: var(--primary-blue); /* Highlight-Hintergrund */
+  color: var(--gold)!important;
   font-weight: bold;
-  border-left: 4px solid var(--highlight-orange); /* Optional: optischer Hinweis */
+  text-decoration: none; /* Keine Unterstreichung */
 }
+
+
+.menu-link.active {
+  color: rgba(255, 193, 7, 0.9);
+}
+
 
 .hamburger-menu {
   display: none;
@@ -369,7 +450,12 @@ header .logo {
   }
 }
 
-
+footer {
+  color: var(--text-dark-grey);
+  padding: 5vh 20vw 4vh 20vw;
+  text-align: center;
+  font-size: 16px;
+}
 
 
 
@@ -416,17 +502,11 @@ header .logo {
   word-break: break-word; /* Zusätzliche Absicherung für ältere Browser */
 }
 
-@media screen and (max-width: 768px) {
-  .app {
-    width: 100%;
-  }
-  
-}
+
 
 .quiz {
   padding: 0 6vb 6vb 6vb;
 }
-
 
 .quiz h4 {
   font-size: 20px;
@@ -541,7 +621,7 @@ header .logo {
   font-size: 18px;
   font-weight: bold;
   border-radius: 4px;
-  color: var(--background-white);
+  color: var(--text-dark-grey);
   text-align: center;
   cursor: pointer;
   flex: 1; /* Gleiche Breite für alle Buttons */
@@ -549,32 +629,14 @@ header .logo {
   text-decoration: none;
   display: inline-block;
   background-color: #8B0000;
+  color: var(--background-white);
 }
 
-.btn3:hover:hover {
+.btn3:hover {
   background-color: var(--gold); /* Helle Goldfarbe */
 }
 
 .btn4 {
-  padding: 10px;
-  font-size: 18px;
-  font-weight: bold;
-  border-radius: 4px;
-  color: var(--background-white);
-  text-align: center;
-  cursor: pointer;
-  flex: 1; /* Gleiche Breite für alle Buttons */
-  margin-bottom: 2vh;
-  text-decoration: none;
-  display: inline-block;
-  background-color: #003366;
-}
-
-.btn4:hover:hover {
-  background-color: var(--gold); /* Helle Goldfarbe */
-}
-
-.btn5 {
   padding: 10px;
   font-size: 18px;
   font-weight: bold;
@@ -586,10 +648,12 @@ header .logo {
   margin-bottom: 2vh;
   text-decoration: none;
   display: inline-block;
-  background-color: #FFD333;
+  background-color: #003366;
+  color: var(--background-white);
+
 }
 
-.btn5:hover {
+.btn4:hover {
   background-color: var(--gold); /* Helle Goldfarbe */
 }
 
@@ -715,16 +779,13 @@ header .logo {
 
 
 .cards-container .card:nth-child(1) {
-  background-color: #8B0000 /* 3-Säulen-System */
+  background-color: #8B0000;
 }
 
 .cards-container .card:nth-child(2) {
   background-color: #003366; /* Versicherungen */
 }
 
-.cards-container .card:nth-child(3) {
-  background-color: #FFD333; /* Finanzinstrumente */
-}
 
 .cards-container .card h3,
 .cards-container .card p {
@@ -785,10 +846,7 @@ header .logo {
 
 
 /* Verringern des Abstands zwischen Inhalts- und Testboxen */
-.topics-section {
-  margin-bottom: 20px; /* Weniger Abstand zwischen Sektionen */
-  padding: 5vh 8vw; /* Etwas kompakterer Innenabstand */
-}
+
 
 /* Anpassung der Breite der Boxen und bessere Ausrichtung */
 .cards-container .card {

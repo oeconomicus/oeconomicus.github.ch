@@ -36,304 +36,268 @@ document.querySelectorAll("nav a").forEach((link) => {
 });
 
 const questions = [
-  // Funktionsweise von Versicherungen
   {
-    question:
-      "Wie nennt man das Prinzip, bei dem die Prämien vieler Versicherter zur Deckung der Schäden weniger genutzt werden?",
+    question: "Welche der folgenden Aussagen über die 2. Säule ist korrekt?",
     answers: [
-      "Moral Hazard",
-      "Kollektive Risikoübernahme",
-      "Solidaritätsprinzip",
-      "Selbstbehalt",
-    ],
-    correct: "Kollektive Risikoübernahme",
-  },
-  {
-    question: "Was bedeutet Moral Hazard im Kontext von Versicherungen?",
-    answers: [
-      "Versicherungen sichern nur grosse Risiken ab.",
-      "Versicherte neigen dazu, vorsichtiger zu handeln.",
-      "Versicherte handeln weniger vorsichtig, weil die Versicherung Schäden deckt.",
-      "Versicherungen erhöhen die Prämien, um höhere Kosten zu kompensieren.",
+      "Beiträge für die 2. Säule sind für alle obligatorisch.",
+      "Der Koordinationsabzug stellt sicher, dass das Einkommen doppelt abgesichert wird.",
+      "Der überobligatorische Teil ist gesetzlich vorgeschrieben.",
+      "Ab dem 25. Lebensjahr fliessen Beiträge neben der Risikovorsorge auch in die Altersgutschriften.",
     ],
     correct:
-      "Versicherte handeln weniger vorsichtig, weil die Versicherung Schäden deckt.",
+      "Ab dem 25. Lebensjahr fliessen Beiträge neben der Risikovorsorge auch in die Altersgutschriften.",
   },
-  // Krankenkasse
   {
-    question:
-      "Welche Leistungen deckt die obligatorische Grundversicherung in der Schweiz ab?",
+    question: "Welche Personengruppe ist in der 2. Säule versichert?",
     answers: [
-      "Private Spitalaufenthalte",
-      "Alternativmedizin",
-      "Arztbesuche und Notfallbehandlungen",
-      "Zahnbehandlungen",
-    ],
-    correct: "Arztbesuche und Notfallbehandlungen",
-  },
-  {
-    question: "Welche Faktoren beeinflussen die Prämien der Grundversicherung?",
-    answers: [
-      "Gesundheitszustand und Einkommen",
-      "Wohnort und Alter",
-      "Beruf und Geschlecht",
-      "Anzahl der Familienmitglieder",
-    ],
-    correct: "Wohnort und Alter",
-  },
-  {
-    question:
-      "Welche Franchise ist am besten geeignet für eine Person, welche nie zum Arzt gehen muss?",
-    answers: ["CHF 300", "CHF 1'500", "CHF 2'500", "CHF 700"],
-    correct: "CHF 2'500",
-  },
-  {
-    question:
-      "Was ist der maximale Selbstbehalt pro Jahr in der Grundversicherung?",
-    answers: ["CHF 500", "CHF 700", "CHF 1'000", "CHF 2'500"],
-    correct: "CHF 700",
-  },
-  {
-    question:
-      "Wie kann man die Höhe der Prämie in der Grundversicherung reduzieren?",
-    answers: [
-      "Durch den Wechsel zur HMO- oder Telmed-Modell",
-      "Durch Erhöhung des Selbstbehalt",
-      "Durch Kündigung der Zusatzversicherung",
-      "Durch Wahl eines höheren Deckungsbetrags",
-    ],
-    correct: "Durch den Wechsel zur HMO- oder Telmed-Modell",
-  },
-  {
-    question:
-      "Warum können Krankenkassen Anträge auf Zusatzversicherungen ablehnen?",
-    answers: [
-      "Aufgrund bestehender Gesundheitsrisiken",
-      "Wegen eines zu niedrigen Einkommens",
-      "Weil die Person bereits im hohen Alter ist",
-      "Weil bereits eine Grundversicherung besteht",
-    ],
-    correct: "Aufgrund bestehender Gesundheitsrisiken",
-  },
-  // Unfallversicherung
-  {
-    question:
-      "Wer ist in der Schweiz obligatorisch gegen Berufsunfälle versichert?",
-    answers: ["Alle Einwohner", "Arbeitnehmende", "Selbstständige", "Rentner"],
-    correct: "Arbeitnehmende",
-  },
-  {
-    question:
-      "Wie lange gilt der Versicherungsschutz der UVG nach dem letzten Arbeitstag?",
-    answers: ["14 Tage", "31 Tage", "60 Tage", "90 Tage"],
-    correct: "31 Tage",
-  },
-  {
-    question: "Welche Kosten übernimmt die Unfallversicherung?",
-    answers: [
-      "Franchise und Selbstbehalt",
-      "Gesamte Heilbehandlungskosten ohne Selbstbehalt",
-      "Nur die Hälfte der Behandlungskosten",
-      "Kosten für Schönheitsoperationen",
-    ],
-    correct: "Gesamte Heilbehandlungskosten ohne Selbstbehalt",
-  },
-  {
-    question: "Welche Prämie wird dem Arbeitnehmer direkt vom Lohn abgezogen?",
-    answers: [
-      "Berufsunfallversicherung",
-      "Nichtberufsunfallversicherung",
-      "Krankenversicherung",
-      "Zusatzversicherung",
-    ],
-    correct: "Nichtberufsunfallversicherung",
-  },
-  // Privathaftpflichtversicherung
-  {
-    question:
-      "Welches Schadensszenario wird typischerweise durch eine Privathaftpflichtversicherung gedeckt?",
-    answers: [
-      "Absichtliches Zerbrechen einer Türe",
-      "Zerbrechen einer teuren Vase bei Freunden",
-      "Schäden an deinem eigenen Laptop",
-      "Kosten für einen Autounfall",
-    ],
-    correct: "Zerbrechen einer teuren Vase bei Freunden",
-  },
-  {
-    question:
-      "Was beeinflusst die Prämienhöhe einer Privathaftpflichtversicherung?",
-    answers: [
-      "Gesundheitszustand",
-      "Deckungssumme und Selbstbehalt",
-      "Anzahl der Schadensfälle anderer Versicherter",
-      "Art des Haushaltsgeräts",
-    ],
-    correct: "Deckungssumme und Selbstbehalt",
-  },
-  // Hausratversicherung
-  {
-    question: "Eine Hausratsversicherung übernimmt...?",
-    answers: [
-      "Schäden durch Unaufmerksamkeit",
-      "Schäden durch Naturereignisse wie Überschwemmungen",
-      "Schäden am Haus selbst",
-      "Schäden durch mutwillige Zerstörung",
-    ],
-    correct: "Schäden durch Naturereignisse wie Überschwemmungen",
-  },
-  {
-    question:
-      "Welche Faktoren spielen bei der Höhe der Prämie einer Hausratsversicherung eine Rolle?",
-    answers: [
-      "Alter der versicherten Gegenstände",
-      "Versicherungswert und Wohnort",
-      "Anzahl der Bewohner im Haushalt",
-      "Einkommen des Versicherten",
-    ],
-    correct: "Versicherungswert und Wohnort",
-  },
-  // Lebensversicherung
-  {
-    question: "Was ist der Hauptzweck einer Lebensversicherung?",
-    answers: [
-      "Absicherung gegen Berufsunfälle",
-      "Finanzielle Absicherung der Angehörigen im Todesfall",
-      "Finanzierung von Krankenbehandlungen",
-      "Steuerliche Vorteile",
-    ],
-    correct: "Finanzielle Absicherung der Angehörigen im Todesfall",
-  },
-  {
-    question: "Welche Form der Lebensversicherung beinhaltet einen Sparanteil?",
-    answers: [
-      "Risikolebensversicherung",
-      "Kapitallebensversicherung",
-      "Unfallversicherung",
-      "Rentenversicherung",
-    ],
-    correct: "Kapitallebensversicherung",
-  },
-  {
-    question: "Welche der Leistungen erbringt eine Risikolebensversicherung?",
-    answers: [
-      "Auszahlung des Sparanteils bei Vertragsende",
-      "Zahlung eines festen Betrags im Todesfall",
-      "Deckung der Behandlungskosten",
-      "Auszahlung einer monatlichen Rente",
-    ],
-    correct: "Zahlung eines festen Betrags im Todesfall",
-  },
-  {
-    question:
-      "Welche Faktoren beeinflussen die Prämienhöhe einer Lebensversicherung?",
-    answers: [
-      "Alter und Gesundheitszustand",
-      "Wohnort und Einkommen",
-      "Beruf und Hobbys",
-      "Familienstand",
-    ],
-    correct: "Alter und Gesundheitszustand",
-  },
-  // Motorfahrzeugversicherungen
-  {
-    question:
-      "Welche Versicherung ist in der Schweiz für Motorfahrzeuge obligatorisch?",
-    answers: [
-      "Teilkaskoversicherung",
-      "Haftpflichtversicherung",
-      "Vollkaskoversicherung",
-      "Insassenversicherung",
-    ],
-    correct: "Haftpflichtversicherung",
-  },
-  {
-    question: "Was deckt die Haftpflichtversicherung für Motorfahrzeuge?",
-    answers: [
-      "Schäden am eigenen Fahrzeug",
-      "Schäden an Dritten oder deren Sachen",
-      "Reparaturen am Motor",
-      "Schäden durch Diebstahl",
-    ],
-    correct: "Schäden an Dritten oder deren Sachen",
-  },
-  {
-    question: "Für welche Schäden kommt die Teilkaskoversicherung auf?",
-    answers: [
-      "Schäden an anderen Fahrzeugen",
-      "Schäden durch Diebstahl oder Naturereignisse",
-      "Schäden durch absichtliche Zerstörung",
-      "Alle Reparaturkosten",
-    ],
-    correct: "Schäden durch Diebstahl oder Naturereignisse",
-  },
-  {
-    question: "Wann lohnt sich eine Vollkaskoversicherung besonders?",
-    answers: [
-      "Bei älteren Fahrzeugen",
-      "Bei Neuwagen oder Leasingfahrzeugen",
-      "Für Fahrzeuge ohne Wertverlust",
-      "Für Fahrzeuge, die selten genutzt werden",
-    ],
-    correct: "Bei Neuwagen oder Leasingfahrzeugen",
-  },
-  {
-    question:
-      "Was ist der Unterschied zwischen Haftpflicht- und Kaskoversicherung?",
-    answers: [
-      "Die Haftpflichtversicherung deckt Schäden am eigenen Fahrzeug, die Kaskoversicherung Schäden an Dritten.",
-      "Die Haftpflichtversicherung ist freiwillig, die Kaskoversicherung obligatorisch.",
-      "Die Haftpflichtversicherung deckt Schäden an Dritten, die Kaskoversicherung Schäden am eigenen Fahrzeug.",
-      "Es gibt keinen Unterschied.",
+      "Alle Personen ab 18 Jahren, unabhängig vom Einkommen.",
+      "Erwerbstätige per 1. Januar des Jahres, in welchem sie 18. werden mit einem Lohn über CHF 22'050.",
+      "Selbstständige ohne Altersbeschränkung.",
+      "Personen mit einem Jahreseinkommen unter CHF 22'050.",
     ],
     correct:
-      "Die Haftpflichtversicherung deckt Schäden an Dritten, die Kaskoversicherung Schäden am eigenen Fahrzeug.",
+      "Erwerbstätige per 1. Januar des Jahres, in welchem sie 18. werden mit einem Lohn über CHF 22'050.",
   },
   {
     question:
-      "Welche Faktoren beeinflussen die Prämienhöhe der Motorfahrzeugversicherung?",
+      "Was bedeutet der Begriff 'obligatorischer Teil' in der 2. Säule?",
     answers: [
-      "Fahrzeugtyp, Alter des Fahrers und Schadenhistorie",
-      "Beruf des Fahrers und Grösse des Autos",
-      "Anzahl der Insassen und Fahrzeugfarbe",
-      "Wohnort des Fahrers und Anzahl der gefahrenen Kilometer",
-    ],
-    correct: "Fahrzeugtyp, Alter des Fahrers und Schadenhistorie",
-  },
-  {
-    question:
-      "Was wird unter dem Begriff 'Selbstbehalt' in der Motorfahrzeugversicherung verstanden?",
-    answers: [
-      "Der maximale Betrag, den die Versicherung zahlt.",
-      "Der Anteil, den der Versicherte im Schadensfall selbst tragen muss.",
-      "Eine zusätzliche Prämie für höhere Deckung.",
-      "Ein Bonus für unfallfreies Fahren.",
+      "Beiträge, die ausschliesslich von Arbeitgebern eingezahlt werden.",
+      "Der versicherte Lohnanteil zwischen dem Koordinationsabzug und dem oberen Grenzbetrag.",
+      "Die freiwilligen Einlagen der Arbeitnehmer.",
+      "Der gesamte Lohnbetrag eines Versicherten.",
     ],
     correct:
-      "Der Anteil, den der Versicherte im Schadensfall selbst tragen muss.",
-  },
-  // Arbeitslosenversicherung
-  {
-    question:
-      "Wer ist in der Schweiz obligatorisch in der Arbeitslosenversicherung versichert?",
-    answers: [
-      "Alle Arbeitnehmenden",
-      "Nur Angestellte mit einem Jahreslohn über CHF 50'000",
-      "Selbstständige",
-      "Rentner",
-    ],
-    correct: "Alle Arbeitnehmenden",
+      "Der versicherte Lohnanteil zwischen dem Koordinationsabzug und dem oberen Grenzbetrag.",
   },
   {
     question:
-      "Wie hoch ist der Prozentsatz des versicherten Lohns, den die Arbeitslosenversicherung in der Regel zahlt?",
+      "Was passiert mit den Beiträgen der 2. Säule, einer Person, welche die Schweiz definitiv verlässt?",
     answers: [
-      "50 % bzw. 70 %",
-      "60 % bzw. 70 %",
-      "90 % bzw. 100 %",
-      "70 % bzw. 80 %",
+      "Die Beiträge verfallen automatisch.",
+      "Sie können als Kapital bezogen werden.",
+      "Sie werden in die 1. Säule übertragen.",
+      "Die Auszahlung ist nur bei Renteneintritt möglich.",
     ],
-    correct: "70 % bzw. 80 %",
+    correct: "Sie können als Kapital bezogen werden.",
+  },
+  {
+    question:
+      "Welche der folgenden Aussagen zur Beitragspflicht der 1. Säule ist korrekt?",
+    answers: [
+      "Erwerbstätige zahlen ab dem 18. Lebensjahr Beiträge, während Nichterwerbstätige ab dem 20. Lebensjahr zahlen müssen.",
+      "Erwerbstätige und Nichterwerbstätige zahlen beide ab dem 17. Lebensjahr Beiträge.",
+      "Beiträge zur 1. Säule werden ausschliesslich von Angestellten gezahlt.",
+      "Die Beitragspflicht endet automatisch mit dem 64. Lebensjahr.",
+    ],
+    correct:
+      "Erwerbstätige zahlen ab dem 18. Lebensjahr Beiträge, während Nichterwerbstätige ab dem 20. Lebensjahr zahlen müssen.",
+  },
+  {
+    question:
+      "Was passiert, wenn der koordinierte Lohn unter CHF 3'675 liegt, die Eintrittsschwelle jedoch erreicht wird?",
+    answers: [
+      "Die Person wird nicht in die 2. Säule aufgenommen.",
+      "Der Mindestbetrag von CHF 3'675 wird als versicherter Lohn angesetzt.",
+      "Es wird ein Sonderbeitrag durch den Arbeitgeber geleistet.",
+      "Der Lohn wird vollständig von der AHV abgesichert.",
+    ],
+    correct:
+      "Der Mindestbetrag von CHF 3'675 wird als versicherter Lohn angesetzt.",
+  },
+  {
+    question:
+      "Was unterscheidet die 2. Säule von der 1. Säule in Bezug auf die Altersvorsorge?",
+    answers: [
+      "In der 2. Säule spart jeder für sich, in der 1. Säule erfolgt eine soziale Umverteilung.",
+      "Die 2. Säule ist vollständig steuerfinanziert, die 1. Säule nicht.",
+      "Die 2. Säule garantiert eine maximale Rente, die 1. Säule nicht.",
+      "Beide Säulen beruhen auf dem Umlageverfahren.",
+    ],
+    correct:
+      "In der 2. Säule spart jeder für sich, in der 1. Säule erfolgt eine soziale Umverteilung.",
+  },
+  {
+    question:
+      "Ab welchem Einkommen (Stand 2024) ist man automatisch in der 2. Säule versichert?",
+    answers: [
+      "CHF 22'050 pro Jahr",
+      "CHF 25'725 pro Jahr",
+      "CHF 18'000 pro Jahr",
+      "CHF 20'000 pro Jahr",
+    ],
+    correct: "CHF 22'050 pro Jahr",
+  },
+  {
+    question: "Wie unterscheidet sich die Säule 3a von der Säule 3b?",
+    answers: [
+      "Säule 3a ist flexibel, während Säule 3b steuerlich gebunden ist.",
+      "Säule 3a ist freiwillig, Säule 3b hingegen obligatorisch.",
+      "Säule 3a ist steuerlich begünstigt, während Säule 3b keine Steuervergünstigungen bietet.",
+      "Säule 3a kann für Immobilien verwendet werden, Säule 3b nicht.",
+    ],
+    correct:
+      "Säule 3a ist steuerlich begünstigt, während Säule 3b keine Steuervergünstigungen bietet.",
+  },
+  {
+    question:
+      "Welche Altersgruppe zahlt 10 % des koordinierten Lohns in die 2. Säule ein?",
+    answers: [
+      "25 - 34 Jahre",
+      "35 - 44 Jahre",
+      "45 - 54 Jahre",
+      "55 - 64/65 Jahre",
+    ],
+    correct: "35 - 44 Jahre",
+  },
+  {
+    question:
+      "Welche Vorteile bietet die freiwillige Versicherung in der Säule 2 für Selbstständige?",
+    answers: [
+      "Steuerliche Vergünstigungen und Risikoversicherung bei Invalidität",
+      "Zugang zu staatlichen Zuschüssen",
+      "Automatische Aufnahme in die 1. Säule",
+      "Verpflichtung zu höheren Beiträgen",
+    ],
+    correct:
+      "Steuerliche Vergünstigungen und Risikoversicherung bei Invalidität",
+  },
+  {
+    question: "Welches Ziel verfolgt die 1. Säule des 3-Säulen-Systems?",
+    answers: [
+      "Kapital für den Ruhestand aufbauen",
+      "Existenzsicherung im Alter oder bei Invalidität",
+      "Finanzierung von Luxusausgaben im Ruhestand",
+      "Maximierung der Rendite durch Investitionen",
+    ],
+    correct: "Existenzsicherung im Alter oder bei Invalidität",
+  },
+
+  {
+    question:
+      "Welche Leistungen gehören zur 1. Säule des Schweizer Vorsorgesystems?",
+    answers: ["AHV, IV, EO, EL", "AHV, BVG, Säule 3a", "IV, EO, EL", "AHV, IV"],
+    correct: "AHV, IV, EO, EL",
+  },
+  {
+    question:
+      "Wie hoch ist der maximale monatliche AHV-Rentenbetrag für Einzelpersonen (Stand 2024)?",
+    answers: ["CHF 1'800", "CHF 2'450", "CHF 3'675", "CHF 4'125"],
+    correct: "CHF 2'450",
+  },
+  {
+    question:
+      "Was passiert, wenn eine Person nicht alle Beiträge in die 1. Säule einzahlt?",
+    answers: [
+      "Es entstehen keine Konsequenzen",
+      "Die Person verliert den Versicherungsschutz",
+      "Es drohen Rentenkürzungen",
+      "Die Beiträge werden rückwirkend erhöht",
+    ],
+    correct: "Es drohen Rentenkürzungen",
+  },
+  {
+    question: "Was ist eine Ergänzungsleistung (EL)?",
+    answers: [
+      "Ein Zuschlag zur AHV-Rente",
+      "Eine Steuervergünstigung für Rentner",
+      "Eine staatliche Unterstützung bei unzureichender AHV-Rente",
+      "Ein Zuschuss zur Krankenversicherung",
+    ],
+    correct: "Eine staatliche Unterstützung bei unzureichender AHV-Rente",
+  },
+  {
+    question: "Welches Ziel verfolgt die 2. Säule des 3-Säulen-Systems?",
+    answers: [
+      "Existenzsicherung",
+      "Erhalt des gewohnten Lebensstandards im Alter",
+      "Finanzierung von Luxusimmobilien",
+      "Umverteilung zwischen Arm und Reich",
+    ],
+    correct: "Erhalt des gewohnten Lebensstandards im Alter",
+  },
+  {
+    question: "Wie wird die 2. Säule finanziert?",
+    answers: [
+      "Durch Steuern",
+      "Durch das Kapitaldeckungsverfahren",
+      "Durch das Umlageverfahren",
+      "Durch freiwillige Beiträge",
+    ],
+    correct: "Durch das Kapitaldeckungsverfahren",
+  },
+  {
+    question: "Was bezeichnet der Koordinationsabzug in der 2. Säule?",
+    answers: [
+      "Den Mindestbeitrag zur Altersvorsorge",
+      "Die Differenz zwischen AHV und Pensionskasse",
+      "Den Teil des Lohns, der nicht in die 2. Säule einfliesst",
+      "Den maximal versicherten Lohn",
+    ],
+    correct: "Den Teil des Lohns, der nicht in die 2. Säule einfliesst",
+  },
+  {
+    question:
+      "Welcher Betrag kann 2024 maximal in die Säule 3a eingezahlt werden und vom steuerbaren Einkommen abgezogen werden? (Angestellte mit Pensionskasse)",
+    answers: ["CHF 5'672", "CHF 7'056", "CHF 9'321", "CHF 15'165"],
+    correct: "CHF 7'056",
+  },
+  {
+    question:
+      "Wann kann das Kapital aus der Säule 3a vorzeitig bezogen werden?",
+    answers: [
+      "Beim Kauf eines Autos",
+      "Beim Wechsel in die Selbstständigkeit",
+      "Bei Arbeitslosigkeit",
+      "Bei Heirat",
+    ],
+    correct: "Beim Wechsel in die Selbstständigkeit",
+  },
+  {
+    question:
+      "Welche Aussage beschreibt das Umlageverfahren der 1. Säule korrekt?",
+    answers: [
+      "Beiträge der Erwerbstätigen werden individuell angespart und verzinst.",
+      "Beiträge der Erwerbstätigen werden direkt zur Finanzierung der Renten und Unterstützungsleistungen verwendet.",
+      "Der Staat finanziert die 1. Säule vollständig aus Steuermitteln.",
+      "Renten werden ausschliesslich aus den Einnahmen der Mehrwertsteuer gezahlt.",
+    ],
+    correct:
+      "Beiträge der Erwerbstätigen werden direkt zur Finanzierung der Renten und Unterstützungsleistungen verwendet.",
+  },
+  {
+    question: "Welche Aussage zur 1. Säule ist korrekt?",
+    answers: [
+      "Jeder erhält Renten proportional zu seinen Einzahlungen.",
+      "Die Rentenhöhe ist unabhängig von der Beitragsdauer.",
+      "Alle zahlen prozentual zu ihrem Einkommen, erhalten bei vollständiger Beitragsdauer jedoch dieselbe maximale AHV-Rente.",
+      "Einkommensstarke Personen erhalten höhere Renten als einkommensschwache.",
+    ],
+    correct:
+      "Alle zahlen prozentual zu ihrem Einkommen, erhalten bei vollständiger Beitragsdauer jedoch dieselbe maximale AHV-Rente.",
+  },
+  {
+    question:
+      "Welcher Prozentsatz des Bruttolohns wird vom Arbeitnehmer für die 1. Säule abgezogen (Stand 2024)?",
+    answers: ["8,7 %", "10,6 %", "5,3 %", "15 %"],
+    correct: "5,3 %",
+  },
+  {
+    question: "Welche Aussage zur Steuerbegünstigung der Säule 3a ist korrekt?",
+    answers: [
+      "Einzahlungen und Auszahlungen haben keinen Einfluss auf die Steuern.",
+      "Einzahlungen in die Säule 3a können vom steuerbaren Einkommen abgezogen werden, während Auszahlungen besteuert werden.",
+      "Sowohl Einzahlungen als auch Auszahlungen der Säule 3a werden besteuert.",
+      "Nur Selbstständige müssen Auszahlungen aus der Säule 3a versteuern.",
+    ],
+    correct:
+      "Einzahlungen in die Säule 3a können vom steuerbaren Einkommen abgezogen werden, während Auszahlungen besteuert werden.",
+  },
+  {
+    question:
+      "Wie hoch ist der maximale Einzahlungsbetrag in die Säule 3a für Selbstständige ohne Pensionskasse (Stand 2024)?",
+    answers: ["CHF 25'390", "CHF 28'750", "CHF 35'280", "CHF 38'540"],
+    correct: "CHF 35'280",
   },
 ];
 
@@ -363,7 +327,7 @@ function shuffleArray(array) {
 function shuffleAnswersForQuestions() {
   questions.forEach((question) => {
     question.shuffledAnswers = [...question.answers];
-    shuffleArray(question.shuffledAnswers); // Antworten mischen
+    shuffleArray(question.shuffledAnswers);
   });
 }
 
@@ -686,7 +650,7 @@ prevButton.addEventListener("click", showPreviousQuestion);
 nextButton.addEventListener("click", showNextQuestion);
 backToOverviewButton.addEventListener("click", showOverview);
 
-shuffleArray(questions); // Fragen mischen
+shuffleArray(questions);
 shuffleAnswersForQuestions();
 startTimer();
 showQuestion(currentQuestionIndex);
