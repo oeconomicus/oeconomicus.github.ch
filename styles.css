@@ -3,19 +3,19 @@
   --light-grey: #f7f7f7;
   --text-dark-grey: #333333;
   --blue: #003366;
-  --red: #8B0000;
-  --gold: #FFC107;
-
+  --red: #8b0000;
+  --gold: #ffc107;
 }
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
 }
 
 body {
   background: var(--background-white);
-  font-family: Garamond, 'Times New Roman', Times, serif;
+  font-family: Garamond, "Times New Roman", Times, serif;
   color: var(--text-dark-grey);
   margin: 0;
   -webkit-font-smoothing: antialiased;
@@ -24,7 +24,7 @@ body {
   overflow-x: hidden;
 }
 
-.container-versicherungen { 
+.container-versicherungen {
   max-width: 1200px;
   margin: 0 auto;
   padding: 40px;
@@ -52,18 +52,14 @@ h1 {
   text-align: center;
 }
 
-
 h6 {
   font-size: 38px;
   margin: 0;
 }
 
-
 h2 {
   font-size: 30px;
 }
-
-
 
 .header-title {
   font-size: 2rem; /* Standardgröße für große Bildschirme */
@@ -97,18 +93,17 @@ h2 {
 
 ::selection {
   background-color: var(--text-dark-grey);
-  color: var(--light-grey);}
+  color: var(--light-grey);
+}
 
 .container {
   padding: 0 20vw;
 }
 
-
 .section-text_a0 {
   padding: 18vh 20vw 4vh 20vw;
   background-color: var(--background-white);
 }
-
 
 .section-text_a {
   padding: 25vh 20vw 4vh 20vw;
@@ -135,7 +130,7 @@ h2 {
 
 .section-text_e {
   padding: 4vh 20vw 4vh 20vw;
-  background-color: rgba(0, 51, 102, 0.9);  /* Alternativ: etwas helleres Rot */
+  background-color: rgba(0, 51, 102, 0.9); /* Alternativ: etwas helleres Rot */
   border-radius: 8px;
   color: white; /* Sicherstellen, dass der Text gut lesbar ist */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Leichter Schatten für Eleganz */
@@ -162,15 +157,23 @@ h2 {
   border-radius: 10px;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  flex: 1 1 300px;
+  max-width: 300px;
+  height: auto;
 }
 
 .cards-container {
-  gap: 10px; /* Gap halbiert */
-  justify-content: space-between; /* Boxen gleichmäßig verteilen */
+  gap: 20px; /* Gap halbiert */
+  justify-content: center; /* Boxen gleichmäßig verteilen */
   flex-wrap: wrap;
+  display: flex;
+  align-items: stretch;
 }
-
-
 
 .cards-container .card {
   flex: 1 1 calc((100% - 40px) / 3); /* Dynamische Breite: 3 Boxen pro Zeile, inkl. Gap */
@@ -197,13 +200,13 @@ h2 {
   text-align: center;
   cursor: pointer;
   flex: 1;
+  max-height: 20px;
 }
 
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
-
 
 p {
   font-size: 24px;
@@ -215,20 +218,15 @@ p {
   word-break: break-word; /* Zusätzliche Absicherung für ältere Browser */
 }
 
-
 p::selection {
   background-color: var(--text-dark-grey);
   color: var(--light-grey);
 }
 
-.cards-container {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
 
-.card-plus, .card {
+
+.card-plus,
+.card {
   background: var(--primary-blue);
   color: var(--background-white);
   padding: 30px;
@@ -239,7 +237,8 @@ p::selection {
   width: 280px;
 }
 
-.card-plus:hover, .card:hover {
+.card-plus:hover,
+.card:hover {
   transform: translateY(-10px);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
 }
@@ -256,7 +255,6 @@ p::selection {
 .menu-link:hover {
   color: var(--gold);
 }
-
 
 header {
   position: fixed;
@@ -298,7 +296,7 @@ header {
 }
 
 .subheader a:hover {
-  color: var(--gold)!important /* Hover-Farbe */
+  color: var(--gold) !important; /* Hover-Farbe */
 }
 
 .subheader2 {
@@ -323,7 +321,7 @@ header {
 }
 
 .subheader2 a:hover {
-  color: var(--gold)!important /* Hover-Farbe */
+  color: var(--gold) !important; /* Hover-Farbe */
 }
 
 header.visible {
@@ -403,16 +401,14 @@ header .logo {
 /* Sicherstellen, dass aktive Links gut sichtbar sind */
 .dropdown-link.active {
   background-color: var(--primary-blue); /* Highlight-Hintergrund */
-  color: var(--gold)!important;
+  color: var(--gold) !important;
   font-weight: bold;
   text-decoration: none; /* Keine Unterstreichung */
 }
 
-
 .menu-link.active {
   color: rgba(255, 193, 7, 0.9);
 }
-
 
 .hamburger-menu {
   display: none;
@@ -457,13 +453,6 @@ footer {
   font-size: 16px;
 }
 
-
-
-
-
-
-
-
 .quiz body {
   background: var(--background-white);
   color: #333333;
@@ -502,8 +491,6 @@ footer {
   word-break: break-word; /* Zusätzliche Absicherung für ältere Browser */
 }
 
-
-
 .quiz {
   padding: 0 6vb 6vb 6vb;
 }
@@ -520,9 +507,11 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;}
+  text-align: center;
+}
 
-#timer, #question-counter {
+#timer,
+#question-counter {
   text-align: center;
   font-size: 18px;
   margin: 10px;
@@ -575,7 +564,8 @@ footer {
     margin-bottom: 10px;
   }
 }
-#prev-btn, #next-btn {
+#prev-btn,
+#next-btn {
   flex: 1; /* Optional: Buttons gleich groß machen */
   max-width: 80px; /* Optional: Maximalgröße der Buttons */
   font-size: 16px;
@@ -628,12 +618,13 @@ footer {
   margin-bottom: 2vh;
   text-decoration: none;
   display: inline-block;
-  background-color: #8B0000;
+  background-color: #8b0000;
   color: var(--background-white);
 }
 
 .btn3:hover {
   background-color: var(--gold); /* Helle Goldfarbe */
+  transform: scale(1.05); /* Leichte Vergrößerung bei Hover */
 }
 
 .btn4 {
@@ -650,11 +641,11 @@ footer {
   display: inline-block;
   background-color: #003366;
   color: var(--background-white);
-
 }
 
 .btn4:hover {
   background-color: var(--gold); /* Helle Goldfarbe */
+  transform: scale(1.05); /* Leichte Vergrößerung bei Hover */
 }
 
 #end-test-btn {
@@ -755,19 +746,21 @@ footer {
 }
 
 @media (max-width: 768px) {
-  #overview .summary-item, #results .summary-item {
-      font-size: 14px; /* Kleinere Schriftgröße */
-      width: 22px; /* Kleinere Boxen */
-      height: 22px;
+  #overview .summary-item,
+  #results .summary-item {
+    font-size: 14px; /* Kleinere Schriftgröße */
+    width: 22px; /* Kleinere Boxen */
+    height: 22px;
   }
 }
 
 /* Anpassungen für sehr kleine Bildschirme */
 @media (max-width: 480px) {
-  #overview .summary-item, #results .summary-item {
-      font-size: 8px; /* Noch kleinere Schriftgröße */
-      width: 10px; /* Noch kleinere Boxen */
-      height: 10px;
+  #overview .summary-item,
+  #results .summary-item {
+    font-size: 8px; /* Noch kleinere Schriftgröße */
+    width: 10px; /* Noch kleinere Boxen */
+    height: 10px;
   }
 }
 
@@ -777,19 +770,20 @@ footer {
   cursor: not-allowed;
 }
 
-
 .cards-container .card:nth-child(1) {
-  background-color: #8B0000;
+  background-color: #8b0000;
 }
 
 .cards-container .card:nth-child(2) {
   background-color: #003366; /* Versicherungen */
 }
 
-
 .cards-container .card h3,
 .cards-container .card p {
   font-size: 20px; /* Schrift vergrößern */
+  flex-grow: 1;
+  margin: 10px 0;
+  line-height: 1.5;
 }
 
 .cards-container .card .inhalt-btn {
@@ -801,20 +795,19 @@ footer {
 
 /* Knöpfe passend zu den Boxen */
 .cards-container .card:nth-child(1) .inhalt-btn {
-  background-color: #FF6347;
+  background-color: #ff6347;
   color: white;
 }
 
 .cards-container .card:nth-child(2) .inhalt-btn {
-  background-color: #1E90FF;
+  background-color: #1e90ff;
   color: white;
 }
 
 .cards-container .card:nth-child(3) .inhalt-btn {
-  background-color: #FF8C00;
+  background-color: #ff8c00;
   color: white;
 }
-
 
 /* Entfernen der Umrandung (Border) der Buttons */
 .cards-container .card .inhalt-btn {
@@ -844,9 +837,7 @@ footer {
   font-weight: bold; /* Bessere Sichtbarkeit */
 }
 
-
 /* Verringern des Abstands zwischen Inhalts- und Testboxen */
-
 
 /* Anpassung der Breite der Boxen und bessere Ausrichtung */
 .cards-container .card {
